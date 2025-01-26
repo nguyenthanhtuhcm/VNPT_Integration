@@ -33,10 +33,10 @@ namespace IntegrationInvoice.Data
                 var user = new AppUser()
                 {
                     Id = userId,
-                    FirstName = "Toan",
-                    LastName = "Tedu",
-                    Email = "admin@tedu.com.vn",
-                    NormalizedEmail = "ADMIN@TEDU.COM.VN",
+                    FirstName = "Nguyen",
+                    LastName = "Thanh Tu",
+                    Email = "nguyenthanhtu@vnpt.com.vn",
+                    NormalizedEmail = "NGUYENTHANHTU@VNPT.COM.VN",
                     UserName = "admin",
                     NormalizedUserName = "ADMIN",
                     IsActive = true,
@@ -44,7 +44,7 @@ namespace IntegrationInvoice.Data
                     LockoutEnabled = false,
                     DateCreated = DateTime.Now
                 };
-                user.PasswordHash = passwordHasher.HashPassword(user, "Admin@123$");
+                user.PasswordHash = passwordHasher.HashPassword(user, "Admin@123");
                 await context.Users.AddAsync(user);
 
                 await context.UserRoles.AddAsync(new IdentityUserRole<Guid>()
